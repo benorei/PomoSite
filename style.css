@@ -22,6 +22,7 @@ body{
     min-height: 50px;
 
     backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     background-color: var(--pane-color);
 
     /* for sticky header */
@@ -178,6 +179,7 @@ body{
     /* margin-top: 20px; */
     background-color: var(--pane-color);
     backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
 
     /* for sticky footer */
     position: fixed;
