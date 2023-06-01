@@ -1,0 +1,150 @@
+:root {
+    --pane-color: rgba(255, 255, 255, 0.7);
+    --button-color: #3478F7;
+}
+
+body{
+    font-family: geologica, sans-serif;
+    margin: 0;
+    background-image: url(cfbg.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#site-headerbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid var(--button-color);
+    min-height: 50px;
+
+    backdrop-filter: blur(4px);
+    background-color: var(--pane-color);
+
+    /* for sticky header */
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    z-index: 999;
+
+}
+
+#site-headerbar span{
+    /* margin: 10px; */
+    padding: 10px;
+}
+
+#site-headerbar span:hover{
+    color: var(--button-color);
+    cursor: pointer;
+}
+
+#page-heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+    padding: 30px;
+ 
+    /* because of header */
+    padding-top: 80px
+}
+
+#page-heading img{
+    height: 60px;
+}
+
+#page-heading span.tagline{
+    font-size: xx-large;
+}
+
+#page-heading span.sale{
+    font-size: large;
+    color: red;
+}
+
+#items-display-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 0px 20px 60px 20px;
+}
+
+#items-display-container .item{
+    border: 1px solid var(--button-color);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 250px;
+    padding: 20px;
+    background-color: var(--pane-color);
+}
+
+/* #items-display-container .item:hover{
+    scale: 1.05;
+} */
+
+#items-display-container h3{
+    margin-bottom: 0;
+}
+
+#items-display-container h4{
+    color: red;
+    padding: 0;
+    margin-top: 0;
+}
+
+#items-display-container h4 s{
+    color: black;
+}
+
+#items-display-container .item img{
+    max-width: 240px;
+    max-height: 150px;
+    border-radius: 10px;
+}
+
+#items-display-container .item .spacer{
+    flex-grow: 1;
+}
+
+#items-display-container button{
+    background-color: var(--button-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+#site-footerbar{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid var(--button-color);
+    height: 50px;
+    /* margin-top: 20px; */
+    background-color: var(--pane-color);
+    backdrop-filter: blur(4px);
+
+    /* for sticky footer */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+    z-index: 999;
+}
+
+@font-face {
+    font-family: geologica;
+    src: url(Geologica-variable.ttf);
+}
+
+.small{
+    font-size: x-small;
+}
