@@ -1,6 +1,30 @@
+//PICK A TAGLINE
+taglines = document.getElementsByClassName("tagline");
+
+console.log(taglines);
+
+console.log(taglines.length);
+
+num_chosen = Math.floor(Math.random() * taglines.length);
+
+console.log(num_chosen);
+
+taglines[num_chosen].style.display = "block";
+
+// SHOW POMO TERMS
+terms = document.getElementsByClassName("pomo-container");
+function show_pomo_terms(){
+    Array.from(terms).forEach(term => {
+        term.style.display = "flex";
+    });
+}
+
+
+// SALE ENDING COUNTDOWN
+
 sale_ending = document.getElementById("sale-ending");
 
-var countDownDate = new Date().getTime() + (20 * 60 * 1000);
+var countDownDate = new Date().getTime() + (1255 * 1000);
 
 // Update the count down every 1 second
 
@@ -25,10 +49,10 @@ function update_countdown(){
 
     // If the count down is finished, write some text
     if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("sale-ending").innerHTML = "EXPIRED";
+        clearInterval(iv);
+        document.getElementById("sale-ending").innerHTML = "0d 0h 0m 0s";
     }
 }
 
-update_countdown();
-setInterval(update_countdown, 1000);
+// update_countdown();
+iv = setInterval(update_countdown, 1000);
