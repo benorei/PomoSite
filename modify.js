@@ -11,12 +11,23 @@ console.log(num_chosen);
 
 taglines[num_chosen].style.display = "block";
 
+pomo_shown = false;
+
 // SHOW POMO TERMS
 terms = document.getElementsByClassName("pomo-container");
 function show_pomo_terms(){
-    Array.from(terms).forEach(term => {
-        term.style.display = "flex";
-    });
+    if(!pomo_shown){
+        Array.from(terms).forEach(term => {
+            term.style.display = "flex";
+        });
+        pomo_shown = true;
+    }
+    else if(pomo_shown){
+        Array.from(terms).forEach(term => {
+            term.style.display = "none";
+        });
+        pomo_shown = false;
+    }
 }
 
 
