@@ -1,15 +1,17 @@
 //PICK A TAGLINE
 taglines = document.getElementsByClassName("tagline");
 
-console.log(taglines);
+function pick_tagline(){
+    Array.from(taglines).forEach(term => {
+        term.style.display = "none";
+    })
 
-console.log(taglines.length);
+    num_chosen = Math.floor(Math.random() * taglines.length);
 
-num_chosen = Math.floor(Math.random() * taglines.length);
+    taglines[num_chosen].style.display = "block";
+}
 
-console.log(num_chosen);
-
-taglines[num_chosen].style.display = "block";
+pick_tagline()
 
 pomo_shown = false;
 

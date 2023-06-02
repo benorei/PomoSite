@@ -34,32 +34,36 @@ body{
 
 }
 
-#site-headerbar #eye{
+#eye, #refresh{
     background-color: var(--button-color);
     border: none;
     padding: 10px 20px;
     border-radius: 20px;
     color: white;
     cursor: pointer;
-    
-    position: absolute;
-    top: 57px;
-    right: 7px;
 
     display: flex;
     justify-content: center;
 }
 
-#site-headerbar #eye:hover{
+#eye{
+    position: absolute;
+    top: 57px;
+    right: 7px;
+}
+
+#eye:hover, #refresh:hover{
     background-color: var(--button-color-selected);
 }
 
-#site-headerbar #eye img{
-    height: 15px;
+#eye img{
+    height: 15px !important;
     padding: 0px;
     margin: 0px;
     filter: invert(100%);
 }
+
+
 
 #site-headerbar span{
     /* margin: 10px; */
@@ -92,6 +96,17 @@ body{
 #page-heading span.tagline{
     font-size: xx-large;
     display: none;
+}
+
+#refresh{
+    padding: 5px 10px !important;
+}
+
+#refresh img{
+    height: 10px !important;
+    padding: 0px;
+    margin: 0px;
+    filter: invert(100%);
 }
 
 #page-heading span.sale{
