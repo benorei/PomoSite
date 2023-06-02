@@ -118,10 +118,6 @@ body{
     background-color: var(--pane-color);
 }
 
-#items-display-container .item:hover{
-    /* background-color: var(--pane-color-dark); */
-}
-
 #items-display-container h3{
     margin-bottom: 0;
     text-align: center;
